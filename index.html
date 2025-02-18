@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме - Калкаман Нурали</title>
+    <title data-ru="Резюме - Калкаман Нурали" data-en="Resume - Kalkaman Nurali">Резюме - Калкаман Нурали</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
     <style>
         body {
@@ -113,7 +113,7 @@
 
 <div class="resume-container">
     <div class="header">
-        <img src="IMG_20250218_122120_983.jpg" alt="KTL(kvn) 2024">
+        <img src="IMG_20250218_122120_983.jpg" alt="Profile Photo">
         <div class="header-text">
             <h1 data-ru="Калкаман Нурали" data-en="Kalkaman Nurali">Калкаман Нурали</h1>
             <h2 data-ru="Биоинженер, студент, организатор, комедист (КВН), филантроп"
@@ -124,51 +124,59 @@
     </div>
 
     <div class="contact">
-        <p>Email: <a href="mailto:nurali.kalkamanov@astanaboysbil.edu.kz">nurali.kalkamanov@astanaboysbil.edu.kz</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/nege_nugga?igsh=Zmt1ejQ2czI5MzBk" target="_blank">@nege_nugga</a></p>
-        <p>Telegram: <a href="https://t.me/Galathusnivisamans" target="_blank">@Galathusnivisamans</a></p>
+        <p data-ru="Email: " data-en="Email: ">
+            <a href="mailto:nurali.kalkamanov@astanaboysbil.edu.kz">nurali.kalkamanov@astanaboysbil.edu.kz</a>
+        </p>
+        <p data-ru="Instagram: " data-en="Instagram: ">
+            <a href="https://www.instagram.com/nege_nugga" target="_blank">@nege_nugga</a>
+        </p>
+        <p data-ru="Telegram: " data-en="Telegram: ">
+            <a href="https://t.me/Galathusnivisamans" target="_blank">@Galathusnivisamans</a>
+        </p>
         <p data-ru="Адрес: 14 Ryskulov St., Astana City" data-en="Address: 14 Ryskulov St., Astana City">
             Адрес: 14 Ryskulov St., Astana City
         </p>
     </div>
 
     <div class="section">
-        <h3>Образование</h3>
+        <h3 data-ru="Образование" data-en="Education">Образование</h3>
         <div class="section-content">
             <h4>Bilim Innovation Lyceum Astana</h4>
             <p>2021 - 2026</p>
-            <p>Средний балл: 4.7 / 5.0</p>
+            <p data-ru="Средний балл: 4.7 / 5.0" data-en="GPA: 4.7 / 5.0">Средний балл: 4.7 / 5.0</p>
             <p>AP Chemistry, AP Biology</p>
         </div>
     </div>
 
     <div class="section">
-        <h3>Опыт работы</h3>
+        <h3 data-ru="Опыт работы" data-en="Work Experience">Опыт работы</h3>
         <div class="section-content">
-            <h4>Организатор, волонтер, министр культуры в парламенте школы</h4>
+            <h4 data-ru="Организатор, волонтер, министр культуры в парламенте школы" 
+                data-en="Organizer, volunteer, Minister of Culture in the school parliament">
+                Организатор, волонтер, министр культуры в парламенте школы
+            </h4>
             <p>2023 - Настоящее время</p>
             <ul class="list">
-                <li>Участие в программе Zhasyl El, положительное влияние на экологию</li>
-                <li>Помощь в защите природы от вредных отходов</li>
-            </ul>
-            
-            <h4>Организация мероприятий</h4>
-            <p>2022 - Настоящее время</p>
-            <ul class="list">
-                <li>Организация мероприятий к 30-летию KATEV</li>
-                <li>Капитан клуба КВН</li>
+                <li data-ru="Участие в программе Zhasyl El, положительное влияние на экологию" 
+                    data-en="Participation in the Zhasyl El program, positive environmental impact">
+                    Участие в программе Zhasyl El, положительное влияние на экологию
+                </li>
+                <li data-ru="Помощь в защите природы от вредных отходов" 
+                    data-en="Helping protect nature from harmful waste">
+                    Помощь в защите природы от вредных отходов
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <h3>Языки</h3>
+        <h3 data-ru="Языки" data-en="Languages">Языки</h3>
         <div class="section-content">
             <ul class="list">
-                <li>Казахский (родной)</li>
-                <li>Английский (выше среднего)</li>
-                <li>Русский (свободно)</li>
-                <li>Турецкий (средний)</li>
+                <li data-ru="Казахский (родной)" data-en="Kazakh (native)">Казахский (родной)</li>
+                <li data-ru="Английский (выше среднего)" data-en="English (upper-intermediate)">Английский (выше среднего)</li>
+                <li data-ru="Русский (свободно)" data-en="Russian (fluent)">Русский (свободно)</li>
+                <li data-ru="Турецкий (средний)" data-en="Turkish (intermediate)">Турецкий (средний)</li>
             </ul>
         </div>
     </div>
@@ -177,17 +185,8 @@
 
 <script>
     function toggleLanguage() {
-        const elements = document.querySelectorAll('[data-ru], [data-en]');
-        const button = document.querySelector('.lang-toggle');
-        
-        elements.forEach(el => {
-            if (el.innerHTML === el.getAttribute('data-ru')) {
-                el.innerHTML = el.getAttribute('data-en');
-                button.innerText = "RU";
-            } else {
-                el.innerHTML = el.getAttribute('data-ru');
-                button.innerText = "EN";
-            }
+        document.querySelectorAll('[data-ru], [data-en]').forEach(el => {
+            el.innerHTML = el.innerHTML === el.getAttribute('data-ru') ? el.getAttribute('data-en') : el.getAttribute('data-ru');
         });
     }
 </script>
