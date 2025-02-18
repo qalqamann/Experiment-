@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Калкаман Нурали</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaeff5;
+            color: #333;
+        }
+        .resume-container {
+            max-width: 850px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            position: relative;
+        }
+        .language-switch {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #0a2351;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #0a2351;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        .header-text {
+            text-align: left;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #0a2351;
+        }
+        .header h2 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+            font-weight: 400;
+        }
+        .contact {
+            background: #0a2351;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .section h3 {
+            background: #0a2351;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 0;
+            font-size: 20px;
+        }
+        .section-content {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+    <button class="language-switch" onclick="switchLanguage()">English</button>
+
+    <div class="header">
+        <img src="IMG_20250218_122120_983.jpg" alt="KTL(kvn) 2024">
+        <div class="header-text">
+            <h1 data-ru="Калкаман Нурали" data-en="Kalkaman Nurali">Калкаман Нурали</h1>
+            <h2 data-ru="Биоинженер, студент, организатор, комедист (КВН), филантроп" 
+                data-en="Bioengineer, Student, Organizer, Comedian (KVN), Philanthropist">
+                Биоинженер, студент, организатор, комедист (КВН), филантроп
+            </h2>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>Email: <a href="mailto:nurali.kalkamanov@astanaboysbil.edu.kz">nurali.kalkamanov@astanaboysbil.edu.kz</a></p>
+        <p data-ru="Телефон: +8 778 291 18 22" data-en="Phone: +8 778 291 18 22">Телефон: +8 778 291 18 22</p>
+        <p data-ru="Адрес: 14 Ryskulov St., Astana City" data-en="Address: 14 Ryskulov St., Astana City">Адрес: 14 Ryskulov St., Astana City</p>
+        <p>TELEGRAM: <a href="https://t.me/Galathusnivisamans">Nurali.Q</a></p>
+    </div>
+    
+    <div class="section">
+        <h3 data-ru="Профиль" data-en="Profile">Профиль</h3>
+        <div class="section-content">
+            <p data-ru="Мотивированный и разносторонний старшеклассник с сильным интересом к биоинженерии и страстью к решению реальных проблем через инновации."
+               data-en="A motivated and versatile high school student with a strong interest in bioengineering and a passion for solving real-world problems through innovation.">
+                Мотивированный и разносторонний старшеклассник с сильным интересом к биоинженерии и страстью к решению реальных проблем через инновации.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 data-ru="Навыки" data-en="Skills">Навыки</h3>
+        <div class="section-content">
+            <ul class="list">
+                <li data-ru="Управление проектами" data-en="Project Management">Управление проектами</li>
+                <li data-ru="Публичные выступления" data-en="Public Speaking">Публичные выступления</li>
+                <li data-ru="Командная работа" data-en="Teamwork">Командная работа</li>
+                <li data-ru="Тайм-менеджмент" data-en="Time Management">Тайм-менеджмент</li>
+                <li data-ru="Лидерские качества" data-en="Leadership">Лидерские качества</li>
+                <li data-ru="Критическое мышление" data-en="Critical Thinking">Критическое мышление</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentLang = "ru"; 
+
+    function switchLanguage() {
+        currentLang = currentLang === "ru" ? "en" : "ru";
+        document.querySelector(".language-switch").textContent = currentLang === "ru" ? "English" : "Русский";
+        
+        document.querySelectorAll("[data-ru]").forEach(element => {
+            element.textContent = element.getAttribute(`data-${currentLang}`);
+        });
+    }
+</script>
+
+</body>
+</html>
