@@ -43,8 +43,8 @@
             justify-content: center;
         }
         .header img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             margin-right: 20px;
             object-fit: cover;
@@ -54,22 +54,26 @@
         }
         .header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 42px;
+            font-weight: bold;
             color: #0a2351;
         }
         .header h2 {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #555;
-            font-weight: 400;
+            margin: 15px 0;
+            font-size: 22px;
+            color: #333;
+            font-weight: 600;
         }
         .contact {
             background: #0a2351;
             color: white;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
             text-align: center;
             margin-top: 20px;
+        }
+        .contact p {
+            font-size: 16px;
         }
         .contact a {
             color: #ffeb3b;
@@ -85,7 +89,7 @@
             padding: 12px;
             border-radius: 8px;
             margin: 0;
-            font-size: 20px;
+            font-size: 22px;
         }
         .section-content {
             padding: 20px;
@@ -98,9 +102,9 @@
             padding: 0;
         }
         .list li {
-            padding: 8px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #ddd;
-            font-size: 16px;
+            font-size: 18px;
         }
         .list li:last-child {
             border-bottom: none;
@@ -124,18 +128,10 @@
     </div>
 
     <div class="contact">
-        <p data-ru="Email: " data-en="Email: ">
-            <a href="mailto:nurali.kalkamanov@astanaboysbil.edu.kz">nurali.kalkamanov@astanaboysbil.edu.kz</a>
-        </p>
-        <p data-ru="Instagram: " data-en="Instagram: ">
-            <a href="https://www.instagram.com/nege_nugga" target="_blank">@nege_nugga</a>
-        </p>
-        <p data-ru="Telegram: " data-en="Telegram: ">
-            <a href="https://t.me/Galathusnivisamans" target="_blank">@Galathusnivisamans</a>
-        </p>
-        <p data-ru="Адрес: 14 Ryskulov St., Astana City" data-en="Address: 14 Ryskulov St., Astana City">
-            Адрес: 14 Ryskulov St., Astana City
-        </p>
+        <p>Email: <a href="mailto:nurali.kalkamanov@astanaboysbil.edu.kz">nurali.kalkamanov@astanaboysbil.edu.kz</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/nege_nugga" target="_blank">@nege_nugga</a></p>
+        <p>Telegram: <a href="https://t.me/Galathusnivisamans" target="_blank">@Galathusnivisamans</a></p>
+        <p>Адрес: 14 Ryskulov St., Astana City</p>
     </div>
 
     <div class="section">
@@ -143,7 +139,7 @@
         <div class="section-content">
             <h4>Bilim Innovation Lyceum Astana</h4>
             <p>2021 - 2026</p>
-            <p data-ru="Средний балл: 4.7 / 5.0" data-en="GPA: 4.7 / 5.0">Средний балл: 4.7 / 5.0</p>
+            <p>Средний балл: 4.7 / 5.0 | GPA: 4.7 / 5.0</p>
             <p>AP Chemistry, AP Biology</p>
         </div>
     </div>
@@ -173,10 +169,10 @@
         <h3 data-ru="Языки" data-en="Languages">Языки</h3>
         <div class="section-content">
             <ul class="list">
-                <li data-ru="Казахский (родной)" data-en="Kazakh (native)">Казахский (родной)</li>
-                <li data-ru="Английский (выше среднего)" data-en="English (upper-intermediate)">Английский (выше среднего)</li>
-                <li data-ru="Русский (свободно)" data-en="Russian (fluent)">Русский (свободно)</li>
-                <li data-ru="Турецкий (средний)" data-en="Turkish (intermediate)">Турецкий (средний)</li>
+                <li>Казахский (родной) | Kazakh (native)</li>
+                <li>Английский (выше среднего) | English (upper-intermediate)</li>
+                <li>Русский (свободно) | Russian (fluent)</li>
+                <li>Турецкий (средний) | Turkish (intermediate)</li>
             </ul>
         </div>
     </div>
@@ -186,8 +182,10 @@
 <script>
     function toggleLanguage() {
         document.querySelectorAll('[data-ru], [data-en]').forEach(el => {
-            el.innerHTML = el.innerHTML === el.getAttribute('data-ru') ? el.getAttribute('data-en') : el.getAttribute('data-ru');
+            let currentLang = document.querySelector('.lang-toggle').textContent;
+            el.innerHTML = (currentLang === "EN") ? el.getAttribute('data-en') : el.getAttribute('data-ru');
         });
+        document.querySelector('.lang-toggle').textContent = (document.querySelector('.lang-toggle').textContent === "EN") ? "RU" : "EN";
     }
 </script>
 
