@@ -22,7 +22,7 @@
             border-radius: 20px;
             position: relative;
         }
-        .language-switch {
+        .lang-toggle {
             position: absolute;
             top: 15px;
             left: 15px;
@@ -30,7 +30,7 @@
             color: white;
             border: none;
             padding: 8px 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 14px;
         }
@@ -109,15 +109,15 @@
 </head>
 <body>
 
-<div class="resume-container">
-    <button class="language-switch" onclick="switchLanguage()">English</button>
+<button class="lang-toggle" onclick="toggleLanguage()">EN</button>
 
+<div class="resume-container">
     <div class="header">
         <img src="IMG_20250218_122120_983.jpg" alt="KTL(kvn) 2024">
         <div class="header-text">
             <h1 data-ru="Калкаман Нурали" data-en="Kalkaman Nurali">Калкаман Нурали</h1>
-            <h2 data-ru="Биоинженер, студент, организатор, комедист (КВН), филантроп" 
-                data-en="Bioengineer, Student, Organizer, Comedian (KVN), Philanthropist">
+            <h2 data-ru="Биоинженер, студент, организатор, комедист (КВН), филантроп"
+                data-en="Bioengineer, student, organizer, comedian (KVN), philanthropist">
                 Биоинженер, студент, организатор, комедист (КВН), филантроп
             </h2>
         </div>
@@ -125,33 +125,35 @@
 
     <div class="contact">
         <p>Email: <a href="mailto:nurali.kalkamanov@astanaboysbil.edu.kz">nurali.kalkamanov@astanaboysbil.edu.kz</a></p>
-        <p data-ru="Телефон: +8 778 291 18 22" data-en="Phone: +8 778 291 18 22">Телефон: +8 778 291 18 22</p>
-        <p data-ru="Адрес: 14 Ryskulov St., Astana City" data-en="Address: 14 Ryskulov St., Astana City">Адрес: 14 Ryskulov St., Astana City</p>
+        <p>Instagram: <a href="https://www.instagram.com/nege_nugga?igsh=Zmt1ejQ2czI5MzBk" target="_blank">@nege_nugga</a></p>
+        <p>Telegram: <a href="https://t.me/Galathusnivisamans" target="_blank">@Galathusnivisamans</a></p>
+        <p data-ru="Адрес: 14 Ryskulov St., Astana City" data-en="Address: 14 Ryskulov St., Astana City">
+            Адрес: 14 Ryskulov St., Astana City
+        </p>
     </div>
 
     <div class="section">
-        <h3 data-ru="Образование" data-en="Education">Образование</h3>
+        <h3>Образование</h3>
         <div class="section-content">
             <h4>Bilim Innovation Lyceum Astana</h4>
-            <p><em>2021 - 2026</em></p>
+            <p>2021 - 2026</p>
             <p>Средний балл: 4.7 / 5.0</p>
-            <p>AP Chemistry</p>
-            <p>AP Biology</p>
+            <p>AP Chemistry, AP Biology</p>
         </div>
     </div>
 
     <div class="section">
-        <h3 data-ru="Опыт работы" data-en="Work Experience">Опыт работы</h3>
+        <h3>Опыт работы</h3>
         <div class="section-content">
             <h4>Организатор, волонтер, министр культуры в парламенте школы</h4>
-            <p><em>2023 - Настоящее время</em></p>
+            <p>2023 - Настоящее время</p>
             <ul class="list">
                 <li>Участие в программе Zhasyl El, положительное влияние на экологию</li>
                 <li>Помощь в защите природы от вредных отходов</li>
             </ul>
-
+            
             <h4>Организация мероприятий</h4>
-            <p><em>2022 - Настоящее время</em></p>
+            <p>2022 - Настоящее время</p>
             <ul class="list">
                 <li>Организация мероприятий к 30-летию KATEV</li>
                 <li>Капитан клуба КВН</li>
@@ -160,7 +162,7 @@
     </div>
 
     <div class="section">
-        <h3 data-ru="Языки" data-en="Languages">Языки</h3>
+        <h3>Языки</h3>
         <div class="section-content">
             <ul class="list">
                 <li>Казахский (родной)</li>
@@ -170,17 +172,22 @@
             </ul>
         </div>
     </div>
+
 </div>
 
 <script>
-    let currentLang = "ru"; 
-
-    function switchLanguage() {
-        currentLang = currentLang === "ru" ? "en" : "ru";
-        document.querySelector(".language-switch").textContent = currentLang === "ru" ? "English" : "Русский";
+    function toggleLanguage() {
+        const elements = document.querySelectorAll('[data-ru], [data-en]');
+        const button = document.querySelector('.lang-toggle');
         
-        document.querySelectorAll("[data-ru]").forEach(element => {
-            element.textContent = element.getAttribute(`data-${currentLang}`);
+        elements.forEach(el => {
+            if (el.innerHTML === el.getAttribute('data-ru')) {
+                el.innerHTML = el.getAttribute('data-en');
+                button.innerText = "RU";
+            } else {
+                el.innerHTML = el.getAttribute('data-ru');
+                button.innerText = "EN";
+            }
         });
     }
 </script>
